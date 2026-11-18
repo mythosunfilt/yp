@@ -45,6 +45,10 @@ http://yelp.co.uk/biz/cheetah-electric-moscow?osq=Electricians
 https://www.yelp.co.uk/biz/infusion-electric-trail?osq=Electricians
 https://www.yelp.co.uk/biz/avalos-electric-quincy?osq=Electricians
 https://www.yelp.com/biz/county-electric-port-orchard?ylpcid=c8c3eaf4db6d48b0b7d416991fad135cac01a0dd
+https://www.yelp.com/biz/sequim-valley-electric-sequim-2?ylpcid=c5a20828528a471294603f59f00c099086b41497
+https://www.yelp.co.uk/biz/sk-electric-ocean-shores-2?osq=Electricians
+https://www.yelp.co.uk/biz/quinton-electrical-and-construction-hoquiam?osq=Electricians
+
 
 
 
