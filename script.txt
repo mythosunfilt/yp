@@ -1,0 +1,43 @@
+{
+  const yelpLocations = ["Grandville, MI", "Lake Wales, FL", "Selma, AL", "Fairburn, GA", "Menomonie, WI", "Moncks Corner, SC", "Ada, OK", "Grain Valley, MO", "Vincennes, IN", "Crawfordsville, IN"];
+  const categories = ["Auto Repair", "Roofers", "Building Supplies", "Carpet Installation", "Carpeting", "Contractors", "Damage Restoration", "Electricians", "Flooring", "Garage Door Services", "Gardeners", "Handyman", "Heating & Air Conditioning/HVAC", "Commertial Cleaning", "Home Inspectors", "Home Organization", "Home Theatre Installation", "Home Window Tinting", "Interior Design", "Skin Care", "Internet Service Providers", "Irrigation", "Landscape Architects", "Landscaping", "Lighting Fixtures & Equipment", "Masonry/Concrete", "Meds Spa", "Painters", "Plumbing", "Pool Cleaners", "Real Estate", "Mental Health Therapy", "Security Systems", "Shades & Blinds", "Solar Installation", "Television Service Providers", "Tree Services", "Utilities", "Window Washing", "Windows Installation", "Excavation Services", "Home Theatre Installation", "Towing", "Commertial Truck Repair",];
+  const delayMs = 10000; // 10 seconds
+
+  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+  (async () => {
+    const urls = [];
+    for (const loc of yelpLocations) {
+      const encodedLoc = encodeURIComponent(loc);
+      for (const cat of categories) {
+        const encodedCat = encodeURIComponent(cat);
+        urls.push(
+          `https://www.yelp.com/search?find_desc=${encodedCat}&find_loc=${encodedLoc}`
+        );
+      }
+    }
+
+    for (let i = 0; i < urls.length; i++) {
+      console.log(`Opening (${i + 1}/${urls.length}):`, urls[i]);
+
+      // Background-tab trick: create a link and simulate a middle/Ctrl/Cmd click
+      const a = document.createElement("a");
+      a.href = urls[i];
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+      a.dispatchEvent(
+        new MouseEvent("click", {
+          bubbles: true,
+          cancelable: true,
+          view: window,
+          ctrlKey: true,
+          metaKey: true,
+        })
+      );
+
+      if (i < urls.length - 1) {
+        await sleep(delayMs);
+      }
+    }
+  })();
+}
