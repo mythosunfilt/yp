@@ -81,8 +81,7 @@ https://www.yelp.com/biz/eternal-canvas-lexington?ylpcid=f6d695c27cc0431d8410537
 https://www.yelp.co.uk/biz/ng-computer-services-boonville?osq=Home+Theatre+Installation
 https://www.yelp.co.uk/biz/quest4-electronics-evansville?osq=Home+Theatre+Installation
 https://www.yelp.co.uk/biz/joes-tech-and-installation-services-indianapolis?osq=Home+Theatre+Installation
-
-
+="""" & A1 & ", " & B1 & """" & ", "
 
 
 
